@@ -6,24 +6,20 @@ package edu.chapman.cpsc356.cardstack;
 public class Card
 {
     private int cardNum;
-    private int suit;
     private CardSuit cardSuit;
 
     //No default constructor given
 
-    public Card(int cardNum, int suit)
+    public Card(int cardNum, CardSuit cardSuit)
     {
         this.cardNum = cardNum;
-        this.suit = suit;
+        this.cardSuit = cardSuit;
     }
 
 
-    public int getCardNum()
-    {
-        return cardNum;
-    }
+    public int getCardNum() { return cardNum; }
 
-    public int getSuit() { return suit; }
+    public CardSuit getCardSuit() { return cardSuit; }
 
     //No setters included, since card cannot be change after created
 }

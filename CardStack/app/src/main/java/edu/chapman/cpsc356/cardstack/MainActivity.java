@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         {
             for (int j = 1; j < 5; ++j)
             {
-                this.cardStack.push(new Card(i,j));
+                this.cardStack.push(new Card(i,toCardSuit(j)));
             }
         }
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayCard(Card c)
     {
         displayCardNum(c.getCardNum());
-        displaySuit(c.getSuit());
+        displaySuit(c.getCardSuit());
     }
 
     public void displayCardNum(int num)
@@ -82,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void displaySuit(int suit)
+    public void displaySuit(CardSuit cardSuit)
     {
-        if (suit == 1)
+        if (cardSuit == CardSuit.HEARTS)
         {
             upperSuitImageView.setImageResource(R.drawable.heart_image);
             centerSuitImageView.setImageResource(R.drawable.heart_image);
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             upperNumTextView.setTextColor(Color.parseColor("#e60000"));
             lowerNumTextView.setTextColor(Color.parseColor("#e60000"));
         }
-        else if (suit == 2)
+        else if (cardSuit == CardSuit.DIAMONDS)
         {
             upperSuitImageView.setImageResource(R.drawable.diamond_image);
             centerSuitImageView.setImageResource(R.drawable.diamond_image);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             upperNumTextView.setTextColor(Color.parseColor("#e60000"));
             lowerNumTextView.setTextColor(Color.parseColor("#e60000"));
         }
-        else if (suit == 3)
+        else if (cardSuit == CardSuit.SPADES)
         {
             upperSuitImageView.setImageResource(R.drawable.spade_image);
             centerSuitImageView.setImageResource(R.drawable.spade_image);
@@ -129,5 +129,21 @@ public class MainActivity extends AppCompatActivity {
         {
             finish();
         }
+    }
+
+    public CardSuit toCardSuit(int n)
+    {
+        switch (n)
+        {
+            case 1:
+                return CardSuit.HEARTS;
+            case 2:
+                return CardSuit.DIAMONDS;
+            case 3:
+                return CardSuit.SPADES;
+            default:
+                return CardSuit.CLUBS;
+        }
+
     }
 }
