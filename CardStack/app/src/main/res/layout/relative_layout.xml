@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_screen"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onScreenClick">
+
+    <RelativeLayout
+        android:id="@+id/rl_upperCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_centerSuit"
+        android:layout_toLeftOf="@id/iv_centerSuit"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/tv_upperNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-smallcaps" />
+
+        <ImageView
+            android:id="@+id/iv_upperSuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_upperNumber"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_centerSuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_lowerCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_centerSuit"
+        android:layout_toRightOf="@id/iv_centerSuit"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp">
+
+        <ImageView
+            android:id="@+id/iv_lowerSuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_lowerNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:rotation="180"
+            android:layout_below="@+id/iv_lowerSuit"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-smallcaps"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
