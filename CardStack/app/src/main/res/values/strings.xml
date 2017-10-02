@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Card Stack</string>
+    <string name="A">A</string>
+    <string name="J">J</string>
+    <string name="Q">Q</string>
+    <string name="K">K</string>
+</resources>
