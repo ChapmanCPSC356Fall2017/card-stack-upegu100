@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         this.lowerSuitImageView = (ImageView) findViewById(R.id.iv_lowerSuit);
 
 
+        //Create and push all 52 cards on cardStack and then shuffle them
         this.cardStack = new Stack<>();
 
         for (int i = 1; i < 14; ++i)
@@ -45,12 +46,23 @@ public class MainActivity extends AppCompatActivity {
         displayCard(cardStack.pop());
     }
 
+    /*
+    displayCard Method
+    Input: Card
+    Output: Void; Displays card given in input on screen by calling displayCardNum and
+    displaySuit methods
+    */
     public void displayCard(Card c)
     {
         displayCardNum(c.getCardNum());
         displaySuit(c.getSuit());
     }
 
+    /*
+    displayCardNum method
+    Input: An integer representing the card number
+    Output: Void; Changes upperNumTextView and lowerNumTextView to the card number
+    */
     public void displayCardNum(int num)
     {
         if ((num > 1)&&(num < 11))
@@ -82,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    /*
+    displaySuit method
+    Input:
+    Output:
+     */
     public void displaySuit(int suit)
     {
         if (suit == 1)
@@ -118,6 +136,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    onScreenClick method
+    Handles an event when the user touches the screen
+    If cardStack is not empty, the top card on cardStack is popped off and displayed
+    If cardStack is empty, the app finishes
+    */
     public void onScreenClick(View view)
     {
         if (!cardStack.isEmpty())
