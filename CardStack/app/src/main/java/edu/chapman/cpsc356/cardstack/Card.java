@@ -7,6 +7,7 @@ public class Card
 {
     private int cardNum;
     private int suit;
+    private CardSuit cardSuit;
 
     //No default constructor given
 
