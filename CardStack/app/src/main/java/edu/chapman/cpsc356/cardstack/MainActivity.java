@@ -1,6 +1,7 @@
 package edu.chapman.cpsc356.cardstack;
 
 import android.graphics.Color;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frame_layout);
+        setContentView(R.layout.relative_layout);
 
         this.upperNumTextView = (TextView) findViewById(R.id.tv_upperNumber);
         this.lowerNumTextView = (TextView) findViewById(R.id.tv_lowerNumber);
@@ -171,6 +172,5 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return CardSuit.CLUBS;
         }
-
     }
 }
