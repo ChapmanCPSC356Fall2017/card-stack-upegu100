@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         this.centerSuitImageView = (ImageView) findViewById(R.id.iv_centerSuit);
         this.lowerSuitImageView = (ImageView) findViewById(R.id.iv_lowerSuit);
 
-
+        //Creates all 52 cards, pushes them onto cardStack, and then shuffles the stack
         this.cardStack = new Stack<>();
 
         for (int i = 1; i < 14; ++i)
@@ -45,12 +45,22 @@ public class MainActivity extends AppCompatActivity {
         displayCard(cardStack.pop());
     }
 
+    /*
+    * displayCard method
+    * input: Card
+    * output: void; displays card to screen by calling displayCardNum and displaySuit
+    */
     public void displayCard(Card c)
     {
         displayCardNum(c.getCardNum());
         displaySuit(c.getCardSuit());
     }
 
+    /*
+    * displayCardNum method
+    * input: card number, with Ace = 1, Jack = 11, Queen = 12, and King = 13
+    * output: void; upperNumTextView and lowerNumTextView to correct number/string
+    */
     public void displayCardNum(int num)
     {
         if ((num > 1)&&(num < 11))
@@ -82,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    * displaySuit method
+    * input: Cardsuit
+    * output: void; changes upperSuitImage, centerSuitImage, and lowerSuitImage to correct suit
+    * Also changes color of upperNumTextView and lowerNumTextView according to correct suit
+    */
     public void displaySuit(CardSuit cardSuit)
     {
         if (cardSuit == CardSuit.HEARTS)
@@ -118,6 +134,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    * onScreenClick method
+    * Handles when user clicks the screen
+    * if cardStack is empty, finishes MainActivity
+    * if cardStack, is not empty, displays Card on top of cardStack and pops it off
+    */
     public void onScreenClick(View view)
     {
         if (!cardStack.isEmpty())
@@ -131,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    * toCardSuit method
+    * input: integer
+    * output: CardSuit enum, either HEARTS, DIAMONDS, SPADES, or CLUBS
+    */
     public CardSuit toCardSuit(int n)
     {
         switch (n)
