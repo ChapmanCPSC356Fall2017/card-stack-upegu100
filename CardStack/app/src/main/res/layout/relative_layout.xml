@@ -11,64 +11,70 @@
         android:id="@+id/rl_upperCorner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/iv_centerSuit"
-        android:layout_toLeftOf="@id/iv_centerSuit"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="40dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/tv_upperNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="50sp"
             android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif-smallcaps" />
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="A"/>
 
         <ImageView
             android:id="@+id/iv_upperSuit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/tv_upperNumber"/>
+            android:layout_below="@+id/tv_upperNumber"
+            android:src="@drawable/club_image"/>
 
     </RelativeLayout>
 
     <ImageView
         android:id="@+id/iv_centerSuit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
-
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="600dp"
-        android:layout_centerInParent="true"/>
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        android:layout_centerInParent="true"
+        android:src="@drawable/club_image"/>
 
     <RelativeLayout
         android:id="@+id/rl_lowerCorner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_centerSuit"
-        android:layout_toRightOf="@id/iv_centerSuit"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="40dp">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp">
 
         <ImageView
             android:id="@+id/iv_lowerSuit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
             android:rotation="180"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/club_image"/>
 
         <TextView
             android:id="@+id/tv_lowerNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="50sp"
             android:rotation="180"
             android:layout_below="@+id/iv_lowerSuit"
             android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif-smallcaps"/>
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/A"/>
 
     </RelativeLayout>
 

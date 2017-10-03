@@ -21,5 +21,5 @@ public class Card
 
     public CardSuit getCardSuit() { return cardSuit; }
 
-    //No setters included, since card cannot be change after created
+    //No setters included, since Card cannot be change after created
 }
