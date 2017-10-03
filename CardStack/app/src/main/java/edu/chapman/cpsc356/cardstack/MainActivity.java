@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.relative_layout);
+        setContentView(R.layout.linear_layout);
 
         this.upperNumTextView = (TextView) findViewById(R.id.tv_upperNumber);
         this.lowerNumTextView = (TextView) findViewById(R.id.tv_lowerNumber);
