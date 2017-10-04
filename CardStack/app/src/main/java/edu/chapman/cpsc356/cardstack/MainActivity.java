@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     /*
     * displayCardNum method
     * input: card number, with Ace = 1, Jack = 11, Queen = 12, and King = 13
-    * output: void; upperNumTextView and lowerNumTextView to correct number/string
+    * output: void; upperNumTextView and lowerNumTextView to correct number/letter
     */
     public void displayCardNum(int num)
     {
